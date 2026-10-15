@@ -1,21 +1,34 @@
-```
+<div align="center">
+
+```text
   ██████╗██╗   ██╗██████╗ ███████╗██████╗        ██████╗ ██╗   ██╗██╗███████╗
  ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗      ██╔═══██╗██║   ██║██║╚══███╔╝
  ██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝█████╗██║   ██║██║   ██║██║  ███╔╝ 
  ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗╚════╝██║▄▄ ██║██║   ██║██║ ███╔╝  
  ╚██████╗   ██║   ██████╔╝███████╗██║  ██║      ╚██████╔╝╚██████╔╝██║███████╗
   ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝       ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝
-
 ```
 
 # ⚡ CYBER-QUIZ PLATFORM
+### High-Performance, Server-Authoritative Real-Time CTF & Tournament Engine
 
-**High-Performance, Server-Authoritative Real-Time CTF & Tournament Engine**
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Next.js 16](https://img.shields.io/badge/Next.js%2016-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![WebSockets](https://img.shields.io/badge/WebSockets-Bidirectional-00f0ff?style=for-the-badge&logo=websocket&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+[![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-Zero_Config_Fallback-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
+[![Turbopack](https://img.shields.io/badge/Turbopack-Blazing_Fast-FF4154?style=for-the-badge&logo=vercel&logoColor=white)](https://turbo.build/)
+[![Concurrency](https://img.shields.io/badge/Concurrency-200%2B%20Tested-00ff66?style=for-the-badge)](https://github.com/echo-Zer0/quiz)
 
-A production-grade, server-authoritative tournament quiz engine built for Cyber Security Clubs, CTF Competitions, and Security Training Bootcamps.
+<br/>
 
-[Key Features](#-key-features) • [Architecture](#-architecture) • [One-Click Local Setup](#-one-click-local-setup-recommended) • [Manual Quick Start](#-manual-quick-start) • [200+ Concurrency Benchmark](#-200-concurrent-users-benchmark) • [LAN Tournament Setup](#-lan-tournament-setup-local-network-ctf) • [Deployment](#-deployment-hugging-face-spaces--docker) • [Anti-Cheat](#%EF%B8%8F-anti-cheat--tournament-integrity)
+**A production-grade, server-authoritative tournament quiz engine built for Cyber Security Clubs, CTF Competitions, and Security Training Bootcamps.**
 
+[Key Features](#-key-features) • [Architecture](#-architecture) • [Quick Start](#-quick-start) • [200+ Concurrency Benchmark](#-200-concurrent-users-benchmark) • [Deployment](#-deployment) • [Anti-Cheat](#-anti-cheat--integrity)
+
+</div>
+
+---
 ## 🌟 Key Features
 
 ### 🎮 Player Experience
