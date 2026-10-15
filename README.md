@@ -1,63 +1,62 @@
-<div align="center">
-
-```text
+```
   ██████╗██╗   ██╗██████╗ ███████╗██████╗        ██████╗ ██╗   ██╗██╗███████╗
  ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗      ██╔═══██╗██║   ██║██║╚══███╔╝
  ██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝█████╗██║   ██║██║   ██║██║  ███╔╝ 
  ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗╚════╝██║▄▄ ██║██║   ██║██║ ███╔╝  
  ╚██████╗   ██║   ██████╔╝███████╗██║  ██║      ╚██████╔╝╚██████╔╝██║███████╗
   ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝       ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝
+
 ```
 
 # ⚡ CYBER-QUIZ PLATFORM
-### High-Performance, Server-Authoritative Real-Time CTF & Tournament Engine
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
-[![Next.js 16](https://img.shields.io/badge/Next.js%2016-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![WebSockets](https://img.shields.io/badge/WebSockets-Bidirectional-00f0ff?style=for-the-badge&logo=websocket&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-[![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
-[![SQLite](https://img.shields.io/badge/SQLite-Zero_Config_Fallback-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
-[![Turbopack](https://img.shields.io/badge/Turbopack-Blazing_Fast-FF4154?style=for-the-badge&logo=vercel&logoColor=white)](https://turbo.build/)
-[![Concurrency](https://img.shields.io/badge/Concurrency-200%2B%20Tested-00ff66?style=for-the-badge)](https://github.com/echo-Zer0/quiz)
+**High-Performance, Server-Authoritative Real-Time CTF & Tournament Engine**
 
-<br/>
+A production-grade, server-authoritative tournament quiz engine built for Cyber Security Clubs, CTF Competitions, and Security Training Bootcamps.
 
-**A production-grade, server-authoritative tournament quiz engine built for Cyber Security Clubs, CTF Competitions, and Security Training Bootcamps.**
-
-[Key Features](#-key-features) • [Architecture](#-architecture) • [Quick Start](#-quick-start) • [200+ Concurrency Benchmark](#-200-concurrent-users-benchmark) • [Deployment](#-deployment) • [Anti-Cheat](#-anti-cheat--integrity)
-
-</div>
-
----
+[Key Features](#-key-features) • [Architecture](#-architecture) • [One-Click Local Setup](#-one-click-local-setup-recommended) • [Manual Quick Start](#-manual-quick-start) • [200+ Concurrency Benchmark](#-200-concurrent-users-benchmark) • [LAN Tournament Setup](#-lan-tournament-setup-local-network-ctf) • [Deployment](#-deployment-hugging-face-spaces--docker) • [Anti-Cheat](#%EF%B8%8F-anti-cheat--tournament-integrity)
 
 ## 🌟 Key Features
 
 ### 🎮 Player Experience
-- **Futuristic Cyberpunk HUD**: Glossy glassmorphism, scanlines, matrix accents, and terminal typography.
-- **Instant Join Gateway**: Join in seconds via a 6-digit room code or camera-scannable QR code with automatic LAN IP resolution.
-- **Question Traverser**: Jump freely between questions with Next / Previous navigators and an interactive question-status grid.
-- **Answer Selection Flexibility**: Change choices before the global timer expires without revealing whether options are correct.
-- **Frozen Scoreboard Privacy**: Question correctness and point values are frozen on submit and only revealed when the game master officially concludes the session.
-- **Session Resilience & Cookie Recovery**: Page refreshes, network drops, or browser tab restarts automatically restore active player sessions without score loss.
+
+* **Futuristic Cyberpunk HUD**: Glossy glassmorphism, scanlines, matrix accents, and terminal typography.
+
+* **Instant Join Gateway**: Join in seconds via a 6-digit room code or camera-scannable QR code with automatic LAN IP resolution.
+
+* **Question Traverser**: Jump freely between questions with Next / Previous navigators and an interactive question-status grid.
+
+* **Answer Selection Flexibility**: Change choices before the global timer expires without revealing whether options are correct.
+
+* **Frozen Scoreboard Privacy**: Question correctness and point values are frozen on submit and only revealed when the game master officially concludes the session.
+
+* **Session Resilience & Cookie Recovery**: Page refreshes, network drops, or browser tab restarts automatically restore active player sessions without score loss.
 
 ### 🛡️ Anti-Cheat & Tournament Integrity
-- **Server-Authoritative Clock**: Eliminates client-side countdown manipulation. Submissions past the time limit are rejected server-side.
-- **Answer Leak Protection**: The API and WebSockets never send `is_correct` or `correct_option_id` to participants while the room is running.
-- **Client Defense Layer**: Built-in clipboard locking (copy/cut/paste prevention), context menu disablement, and tab-switch warning alerts.
-- **One User Per Browser**: Local storage & signed session token lockouts prevent multi-accounting from a single browser.
-- **Randomized Challenge Sequences**: Each contestant receives a deterministically randomized challenge order to combat screen-peeking.
+
+* **Server-Authoritative Clock**: Eliminates client-side countdown manipulation. Submissions past the time limit are rejected server-side.
+
+* **Answer Leak Protection**: The API and WebSockets never send `is_correct` or `correct_option_id` to participants while the room is running.
+
+* **Client Defense Layer**: Built-in clipboard locking (copy/cut/paste prevention), context menu disablement, and tab-switch warning alerts.
+
+* **One User Per Browser**: Local storage & signed session token lockouts prevent multi-accounting from a single browser.
+
+* **Randomized Challenge Sequences**: Each contestant receives a deterministically randomized challenge order to combat screen-peeking.
 
 ### ⚡ Game Master & Admin Control Center
-- **Dynamic Quiz Creator**: Build quizzes with custom time limits, dynamic multiple-choice options, and formatted questions.
-- **Real-Time Telemetry Ticker**: Watch answers and player progress stream into the live admin cockpit as contestants click submit.
-- **Global Countdown Synchronizer**: Start, monitor, and freeze matches room-wide with sub-millisecond precision.
-- **Instant Debrief & Analytics**: Exportable scorecards, accuracy percentages, response-time breakdowns, and podium ranks.
 
----
+* **Dynamic Quiz Creator**: Build quizzes with custom time limits, dynamic multiple-choice options, and formatted questions.
+
+* **Real-Time Telemetry Ticker**: Watch answers and player progress stream into the live admin cockpit as contestants click submit.
+
+* **Global Countdown Synchronizer**: Start, monitor, and freeze matches room-wide with sub-millisecond precision.
+
+* **Instant Debrief & Analytics**: Exportable scorecards, accuracy percentages, response-time breakdowns, and podium ranks.
 
 ## 🏗️ Architecture
 
-```text
+```
 quiz-web/
 ├── backend/                        # FastAPI High-Concurrency Async Service
 │   ├── app/
@@ -90,10 +89,10 @@ quiz-web/
 │   ├── components/                 # Reusable Neon Cyberpunk UI Components
 │   └── lib/api.js                  # Dynamic API & WebSocket Origin Resolver
 │
+├── run.sh                          # Universal One-Click Bootstrapper & Supervisor
 └── .gitignore                      # Strict Protection for Secrets, DBs & Environments
-```
 
----
+```
 
 ## ⚡ 200+ Concurrent Users Benchmark
 
@@ -101,7 +100,7 @@ The engine is specifically optimized to run smoothly on free-tier infrastructure
 
 ### 📊 Benchmark Results (200 Simultaneous Participants)
 
-```text
+```
 =======================================================================
 🚀 200 CONCURRENT USERS REAL-TIME BENCHMARK RESULTS 🚀
 =======================================================================
@@ -114,11 +113,7 @@ Average Question Fetch (RAM):    3.98 ms  (Sub-5ms In-Memory Cache Hit)
 Average Answer Submit Latency:   903.33 ms
 Effective Throughput:            90.1 req/sec
 =======================================================================
-```
-
-### ⚡ WebSocket Concurrent Stress Test
-
-```text
+⚡ WebSocket Concurrent Stress Test
 =======================================================================
 ⚡ 200 CONCURRENT WEBSOCKET BENCHMARK RESULTS ⚡
 =======================================================================
@@ -128,34 +123,75 @@ Connection Failures:             0
 Average Roundtrip per Client:    54.31 ms
 Heartbeat Interval:              25s (Eliminates 60s Reverse-Proxy Drops)
 =======================================================================
+
 ```
 
 ### 🛠️ Optimization Highlights
-1. **Single-Query Batch Insert**: Question sequences for joining players are inserted as a single batch array instead of loops of individual queries ($2,000\rightarrow 1$ DB request).
+
+1. **Single-Query Batch Insert**: Question sequences for joining players are inserted as a single batch array instead of loops of individual queries ($2,000 \to 1$ DB request).
+
 2. **Immutable Question Caches**: Questions and options are cached in server RAM (`_quiz_questions_cache`), serving all 200 players at sub-5ms latency with zero DB queries.
+
 3. **Participant Metadata Cache**: Resolves player session lookups in memory (`_participant_meta_cache`), dropping answer submission database overhead by 75%.
+
 4. **1.5s Short-TTL Leaderboard Cache**: Protects against aggregate sorting spikes when dozens of answers arrive simultaneously.
+
 5. **Non-Blocking WebSocket Broadcasts**: Leverages `asyncio.gather` with error isolation, ensuring one slow mobile client never blocks the room broadcast.
+
 6. **25s Background Heartbeat**: Automatic WebSocket ping/pong loop stops cloud proxies (Cloudflare, Hugging Face, NGINX) from terminating idle connections.
 
----
+## 🚀 One-Click Local Setup (Recommended)
 
-## 🚀 Quick Start
+You can launch both the backend and frontend simultaneously with a single automated runner script (`run.sh`).
 
-### 1. Prerequisites
-- **Python 3.10+**
-- **Node.js 18+** & **npm**
-- **Git**
+### Prerequisites
 
-### 2. Clone the Repository
-```bash
+* Python 3.10+
+
+* Node.js 18+ & npm
+
+* Git
+
+### Quick Run
+
+```
+# 1. Clone the repository
 git clone https://github.com/echo-Zer0/quiz.git
 cd quiz
+
+# 2. Grant executable permission to the script
+chmod +x run.sh
+
+# 3. Launch the platform
+./run.sh
+
 ```
 
-### 3. Backend Setup
+### What `run.sh` does automatically:
 
-```bash
+* Checks system dependencies (`python3`, `node`, `npm`).
+
+* Creates and configures the Python virtual environment (`backend/.venv`).
+
+* Installs backend Python dependencies (`requirements.txt`).
+
+* Installs frontend Node dependencies (`npm install`).
+
+* Auto-generates `backend/.env` with a secure random `JWT_SECRET` and switches to the built-in SQLite engine (`quiz_local.sqlite`) if no Supabase credentials are provided.
+
+* Auto-generates `frontend/.env.local` configured to communicate with the local backend.
+
+* Boots both services concurrently (`FastAPI: 8000`, `Next.js: 3000`).
+
+* Listens for `Ctrl+C` / termination signals and cleans up both background processes safely.
+
+## 🛠️ Manual Quick Start
+
+If you prefer to configure and run the services in individual terminal tabs:
+
+### 1. Backend Setup
+
+```
 # Navigate to backend directory
 cd backend
 
@@ -168,100 +204,81 @@ pip install -r requirements.txt
 
 # Configure environment variables
 cp .env.example .env
+
 ```
 
-Edit `.env` if you want to connect to Supabase:
-```env
+Edit `.env` (optional — omitting Supabase credentials will auto-fallback to SQLite `quiz_local.sqlite`):
+
+```
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your-supabase-service-role-key
 JWT_SECRET=your-random-jwt-secret-key
 FRONTEND_URL=http://localhost:3000
 HOST=0.0.0.0
 PORT=8000
+
 ```
-> **Tip**: If you do not provide Supabase credentials, the platform **automatically boots using its built-in SQLite engine** (`quiz_local.sqlite`) with zero configuration required!
 
 Start the backend:
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
 ```
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+```
+
 API Documentation will be live at: `http://localhost:8000/docs`
 
----
+### 2. Frontend Setup
 
-### 4. Frontend Setup
-
-```bash
+```
 # Navigate to frontend directory
 cd ../frontend
 
-# Install node dependencies
+# Install dependencies
 npm install
 
 # Configure environment variables
 cp .env.example .env.local
+
 ```
 
-Verify `.env.local`:
-```env
+Verify `frontend/.env.local`:
+
+```
 NEXT_PUBLIC_API_URL=http://localhost:8000
 NEXT_PUBLIC_WS_URL=ws://localhost:8000
+
 ```
 
 Start the frontend development server:
-```bash
-npm run dev
+
 ```
+npm run dev
+
+```
+
 Open your browser at: `http://localhost:3000`
-
----
-
-## 🌐 LAN Tournament Setup (Local Network CTF)
-
-To host a live competition where players connect via phones, laptops, and tablets on the same Wi-Fi router:
-
-1. **Find your host IP address**:
-   ```bash
-   hostname -I
-   # Example: 192.168.1.150
-   ```
-2. **Update frontend environment variable** (`frontend/.env.local`):
-   ```env
-   NEXT_PUBLIC_API_URL=http://192.168.1.150:8000
-   NEXT_PUBLIC_WS_URL=ws://192.168.1.150:8000
-   ```
-3. **Build & run the frontend**:
-   ```bash
-   npm run build
-   npm run start -- -H 0.0.0.0 -p 3000
-   ```
-4. Participants can now scan the QR code on the admin projector or browse to `http://192.168.1.150:3000` to enter the battle arena!
-
----
 
 ## 🐳 Deployment (Hugging Face Spaces / Docker)
 
 ### Deploy to Hugging Face Spaces (Docker Space)
-1. Create a new Space on [Hugging Face](https://huggingface.co/spaces) and select **Docker**.
-2. Set your repository secret variables (`SUPABASE_URL`, `SUPABASE_KEY`, `JWT_SECRET`).
-3. Deploy the container. The background WebSocket heartbeat loop will keep connections active and prevent HF 60s proxy termination!
 
----
+1. Create a new Space on Hugging Face and select **Docker**.
+
+2. Set your repository secret variables (`SUPABASE_URL`, `SUPABASE_KEY`, `JWT_SECRET`).
+
+3. Deploy the container. The background WebSocket heartbeat loop will keep connections active and prevent HF 60s proxy termination!
 
 ## 🔒 Security Best Practices
 
-- All `.env`, `.env.local`, SQLite databases, Python virtual environments, and build artifacts are strictly excluded by `.gitignore`.
-- Always generate a high-entropy secret for `JWT_SECRET` in production (`openssl rand -hex 32`).
-- CORS headers in `backend/app/main.py` should be restricted to your production domain for public deployments.
+* All `.env`, `.env.local`, SQLite databases, Python virtual environments, and build artifacts are strictly excluded by `.gitignore`.
 
----
+* Always generate a high-entropy secret for `JWT_SECRET` in production (`openssl rand -hex 32`).
+
+* CORS headers in `backend/app/main.py` should be restricted to your production domain for public deployments.
 
 ## 📜 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-<div align="center">
-
-**Crafted with ⚡ and Neon for the Cybersecurity Community.**
-
-</div>
+Crafted with ⚡ and Neon for the Cybersecurity Community.
